@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbackdrop/home_page.dart';
 import 'package:flutterbackdrop/twopanels.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: new ThemeData(primarySwatch: Colors.teal),
-      home: new BackdropPage(),
-    ));
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+  runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: new ThemeData(primarySwatch: Colors.teal),
+    home: new BackdropPage(),
+  ));
+}
 
 class BackdropPage extends StatefulWidget {
   @override
